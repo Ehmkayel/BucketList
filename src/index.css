@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+  font-family: "Rubik", sans-serif;
+
+}
+
+.mobile-menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: flex-end;
+  overflow-x: hidden;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.mobile-menu-container.open {
+  transform: translateX(0);
+}
+
+.mobile-menu-overlay {
+  flex: 1;
+}
+
+.mobile-menu-content {
+  width: 80%;
+  max-width: 320px;
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
