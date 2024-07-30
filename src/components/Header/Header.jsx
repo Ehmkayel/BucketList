@@ -11,11 +11,11 @@ const Header = () => {
         <div className='logo'>
             <img src="https://res.cloudinary.com/drphumgcb/image/upload/v1722260853/cover-removebg-preview_nhgfi2.png" alt="logo" className='h-12'/>
         </div> 
-        <nav className='hidden lg:flex space-x-8 items-center text-[14px] font-medium'>
+        <nav className='heading hidden lg:flex space-x-8 items-center text-[14px] font-medium'>
             <a href="#">Destination</a>
             <a href="#">Packages</a>
             <a href="#">About Us</a>
-            <a href="#">FAQ</a>
+            <a href="" id="/FAQSection">FAQ</a>
             <a href="#" className='bg-blue px-4 py-2 flex text-white hover:bg-white hover:text-blue border border-blue justify-center items-center rounded-[8px]'>Book A Travel</a>
         </nav>
         {/* Mobile Menu Buttons*/}

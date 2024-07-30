@@ -14,9 +14,13 @@ const MostVisited = () => {
                 key={index}
                 image={item.image}
                 imageTitle={item.imageTitle}
-                title={item.title} 
+                title={item.title}
+                locationArrow ={item.locationArrow} 
+                location={item.location}
+                description={item.description}
                 fee={item.fee} 
-                button={ <Button className="w-full md:w-[40%]">
+                rating={item.rating}
+                button={ <Button className="w-full md:w-[30%]">
                 Book Now
               </Button>}
             />
