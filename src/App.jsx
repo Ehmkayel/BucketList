@@ -4,12 +4,17 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
+import DestinationPage from "./pages/Destination/DestinationPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <LandingPage/>,
   },
+  {
+    path: "/destinationPage",
+    element: <DestinationPage/>
+  }
  
 ]);
 

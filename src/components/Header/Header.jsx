@@ -8,14 +8,15 @@ const Header = () => {
     }
   return (
     <main className=' flex z-40 border bg-white fixed p-4 px-4 md:[px-5rem] shadow w-full justify-between items-center'>
-        <div className='logo'>
-            <img src="https://res.cloudinary.com/drphumgcb/image/upload/v1722260853/cover-removebg-preview_nhgfi2.png" alt="logo" className='h-12'/>
+        <div className='logo cursor-pointer'>
+            <img src="https://res.cloudinary.com/drphumgcb/image/upload/v1722427128/cover-removebg-preview_1_eczrt3.png" alt="logo" className='h-12 '/>
         </div> 
-        <nav className='heading hidden lg:flex space-x-8 items-center text-[14px] font-medium'>
-            <a href="#">Destination</a>
-            <a href="#">Packages</a>
-            <a href="#">About Us</a>
-            <a href="" id="/FAQSection">FAQ</a>
+        <nav className='heading hidden lg:flex space-x-8 items-center text-[14px] font-medium '>
+            <a href="/" className='hover:text-blue'>Home</a>
+            <a href="/destinationPage" className='hover:text-blue'>Destination</a>
+            <a href="#" className='hover:text-blue'>Packages</a>
+            <a href="#" className='hover:text-blue'>About Us</a>
+            <a href="" className='hover:text-blue'>FAQ</a>
             <a href="#" className='bg-blue px-4 py-2 flex text-white hover:bg-white hover:text-blue border border-blue justify-center items-center rounded-[8px]'>Book A Travel</a>
         </nav>
         {/* Mobile Menu Buttons*/}

@@ -6,7 +6,7 @@ const Footer = () => {
     <section className='mt-[4rem] relative border pb-[5rem] flex md:justify-center'>
         <div className=' md:px-8 md:flex md:justify-between md:space-x-[2rem] lg:space-x-[4rem] px-4 md:pt-[2.5rem] top-[1rem] text-gray-900'>
             {/* First column */}
-        <div className='logo md:w-[70%]'>
+        <div className='logo md:w-[40%]'>
             <img src="https://res.cloudinary.com/drphumgcb/image/upload/v1722260853/cover-removebg-preview_nhgfi2.png" alt="logo" className='h-12'/>
             <p className=''>Discover and plan your dream adventures with ease. From exploring exotic destinations to finding unique experiences, BucketList makes travel planning simple and exciting.</p>
         </div> 
