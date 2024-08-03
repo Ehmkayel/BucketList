@@ -13,9 +13,9 @@ const Header = () => {
         </div> 
         <nav className='heading hidden lg:flex space-x-8 items-center text-[14px] font-medium '>
             <a href="/" className='hover:text-blue'>Home</a>
-            <a href="/destinationPage" className='hover:text-blue'>Destination</a>
+            <a href="/destination" className='hover:text-blue'>Destination</a>
             <a href="#" className='hover:text-blue'>Packages</a>
-            <a href="#" className='hover:text-blue'>About Us</a>
+            <a href="#" className='hover:text-blue'>Favourite</a>
             <a href="" className='hover:text-blue'>FAQ</a>
             <a href="#" className='bg-blue px-4 py-2 flex text-white hover:bg-white hover:text-blue border border-blue justify-center items-center rounded-[8px]'>Book A Travel</a>
         </nav>
@@ -68,9 +68,9 @@ const Header = () => {
             </button>
             {/* Menu items */}
             
-                <a href="#" className='block'>Destination</a>
+                <a href="/destination" className='block'>Destination</a>
                 <a href="#" className="block">Packages</a>
-                <a href="#" className="block">About Us</a>
+                <a href="#" className="block">Favourite</a>
                 <a href="#" className="block">FAQ</a>
                 <a href="#" className="bg-blue hover:bg-white hover:text-blue border border-blue px-4 py-2 flex text-white justify-center items-center rounded-[8px]">Book A Travel</a>
             
