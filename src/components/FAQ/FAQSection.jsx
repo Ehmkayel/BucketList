@@ -3,7 +3,7 @@ import { FAQData } from './FAQData';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 
 
-const FaqSection = () => {
+const FaqSection = ({id}) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const handleClick = (index) => {
@@ -11,7 +11,7 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="max-w-3xl mx-auto px-4 py-8">
+    <section id= {id} className="max-w-3xl mx-auto px-4 py-8">
       <h2 className="heading text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
       <div className="space-y-4">
         {FAQData.map((item, index) => (

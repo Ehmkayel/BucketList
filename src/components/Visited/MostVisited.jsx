@@ -3,9 +3,9 @@ import { VisitedData } from './VisitedData'
 import MostVisitedCard from '../ReUsable/MostVisitedCard'
 import Button from '../ReUsable/Button'
 
-const MostVisited = () => {
+const MostVisited = ({id}) => {
   return (
-    <section className='py-4 lg:py-10 mt-10 md:mt-[6rem] px-4 lg:px-20'>
+  <section id={id} className='py-4 lg:py-10 mt-10 md:mt-[6rem] px-4 lg:px-20'>
         <div className=''>
         <h2 className='text-xl md:text-3xl font-bold text-left md:text-center mb-8'>Most Visited Destinations</h2>
         <div className='flex flex-col lg:flex-row p-4 lg:space-x-10 items-center '>

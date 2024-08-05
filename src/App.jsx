@@ -4,18 +4,25 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
-import DestinationPage from "./pages/Destination/DestinationPage";
+import Layout from "./components/Layout/Layout";
+import Package from "./pages/Packages/Package.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LandingPage/>,
+    element: <Layout />, 
+    children: [
+      {
+        index: true,
+        element: <LandingPage />,
+      },
+      {
+        path: "package",
+        element: <Package/>
+      },
+      
+    ],
   },
-  {
-    path: "/destination",
-    element: <DestinationPage/>
-  }
- 
 ]);
 
 export default function App() {

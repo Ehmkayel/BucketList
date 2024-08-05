@@ -1,7 +1,7 @@
 import React from 'react'
-import DestinationForm from './DestinationForm'
+import PackagesForm from './PackagesForm'
 
-const DestinationHero = () => {
+const PackagesHero = () => {
   return (
     <main>
         <section>
@@ -11,7 +11,7 @@ const DestinationHero = () => {
                 </video>
             </div>
             <div>
-                <DestinationForm/>
+                <PackagesForm/>
             </div>
 
         </section>
@@ -20,4 +20,4 @@ const DestinationHero = () => {
   )
 }
 
-export default DestinationHero
+export default PackagesHero

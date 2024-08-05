@@ -2,7 +2,8 @@ import React from 'react'
 import Button from '../../components/ReUsable/Button'
 import { FaSearchLocation } from 'react-icons/fa'
 
-const DestinationForm = () => {
+
+const PackagesForm = () => {
   return (
     <section className="p-4 py-5 bg-skyBlue">
       <form className="">
@@ -76,4 +77,4 @@ const DestinationForm = () => {
   )
 }
 
-export default DestinationForm
+export default PackagesForm
