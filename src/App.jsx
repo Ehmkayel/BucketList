@@ -6,6 +6,8 @@ import {
 import LandingPage from "./pages/LandingPage/LandingPage";
 import Layout from "./components/Layout/Layout";
 import Package from "./pages/Packages/Package.jsx";
+import Confirmation from "./components/BookNow/Confirmation";
+import BookingForm from "./components/BookNow/BookingForm";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
         path: "package",
         element: <Package/>
       },
+      {
+        path: "booking",
+        element: <BookingForm/>
+      },
+      {
+        path: "/booking-confirmation",
+        element: <Confirmation/>
+      }
       
     ],
   },

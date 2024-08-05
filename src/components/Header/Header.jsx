@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
+
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,6 +13,7 @@ const Header = () => {
 
     const handleLinkClick = (link) => {
         setActiveLink(link);
+        setIsMobileMenuOpen(false);
       
     };
 
@@ -60,12 +62,11 @@ const Header = () => {
                 >
                     FAQ
                 </a>
-                <a
-                    href="#"
+                <Link to="/booking"
                     className='bg-blue px-4 py-2 flex text-white hover:bg-white hover:text-blue border border-blue justify-center items-center rounded-[8px]'
                 >
                     Book A Travel
-                </a>
+                </Link>
             </nav>
             {/* Mobile Menu Buttons */}
             <div className='logo flex items-center lg:hidden'>
@@ -150,12 +151,11 @@ const Header = () => {
                     >
                         FAQ
                     </a>
-                    <a
-                        href="#"
+                    <Link to="/booking"
                         className='bg-blue hover:bg-white hover:text-blue border border-blue px-4 py-2 flex text-white justify-center items-center rounded-[8px]'
                     >
                         Book A Travel
-                    </a>
+                    </Link>
                 </div>
             </div>
         </main>

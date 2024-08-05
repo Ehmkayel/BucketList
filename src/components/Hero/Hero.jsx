@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <main className="bg-skyBlue container mx-auto pt-[6rem] lg:pt-[10rem]">
     <section className="flex flex-col lg:flex-row justify-between px-4 md:px-[2rem] lg:px-[4rem] items-center">
-      <figcaption className="heroText mb-8 text-center lg:text-left w-full lg:w-[40%]">
+      <figcaption className=" mb-8 text-center lg:text-left w-full lg:w-[40%]">
         <h1 className="text-3xl md:text-[2xl] xl:text-[3rem] leading-[2rem] md:leading-[3.3rem] font-semibold mb-4">
         Start planning your ultimate adventure. Your bucket list awaits!
         </h1>
