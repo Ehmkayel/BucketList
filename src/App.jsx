@@ -9,6 +9,7 @@ import Package from "./pages/Packages/Package.jsx";
 import Confirmation from "./components/BookNow/Confirmation";
 import BookingForm from "./components/BookNow/BookingForm";
 
+
 const router = createBrowserRouter([
   {
     path: "/",

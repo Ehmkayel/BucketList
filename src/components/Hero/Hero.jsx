@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../ReUsable/Button'
+import { FaSearch } from 'react-icons/fa'
 
 const Hero = () => {
   return (
@@ -12,13 +12,18 @@ const Hero = () => {
         <p className="text-base md:text-xl">
         Tired of just dreaming about those incredible destinations on your bucket list? Our curated tours and personalized travel experiences are designed to make your travel aspirations come true. 
         </p>
+  
+          <div className="relative w-full lg:max-w-[50%] mt-6">
+              <FaSearch className="absolute top-1/2 transform -translate-y-1/2 left-4 text-gray-500"/>
+              <input
+                 type="text"
+                 placeholder="Search your destinations"
+                 className="w-full pr-4 py-2 pl-12 border outline-blue rounded-md"
+              />
+          </div>
 
-        <div className="btn flex flex-col md:flex-row mt-6 space-y-4 md:space-y-0 md:space-x-4">
-          <Button className="w-full md:w-[40%]">
-            Sign Up
-          </Button>
-          <input type="text" placeholder="Search for destinations" className="border p-3 rounded-[5px] text-center font-bold w-full md:w-[40%] outline-blue"/>
-        </div>
+
+        
       </figcaption>
       <figure className="lg:max-w-[50%] object-contain hidden md:block overflow-hidden ">
         <img

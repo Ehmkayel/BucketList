@@ -36,8 +36,8 @@ const Footer = () => {
         {/* Fourth column */}
         <div className='my-8 md:my-0 md:w-[30%]'>
             <p className='font-bold cursor-pointer mb-3'>Join Our Newsletter</p>
-            <div className="relative w-full max-w-md">
-                <input type="email" placeholder="Your email Address" className="w-full pr-32 py-2 pl-4 border outline-blue rounded-md"/><button className="absolute top-0 right-0 w-24 h-full bg-blue text-white rounded-md border-none">Subscribe</button>
+            <div className="relative w-full lg:max-w-md">
+                <input type="email" placeholder="Your email Address" className="w-full pr-32 py-2 pl-4 border outline-blue rounded-md"/><button className="absolute top-0 right-0 w-15 lg:w-24 h-full bg-blue text-white rounded-md border-none">Subscribe</button>
             </div>
             <p>Will send weekly updates of packages available</p>
         </div>
