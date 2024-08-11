@@ -9,8 +9,7 @@ const MostVisitedCard = ({image, imageTitle, title, locationArrow, location, des
         <img 
           src={image}
           alt={imageTitle}
-          className="w-full h-full rounded-lg object-cover border-gray-300 transform transition duration-500 hover:scale-105"
-        />
+          className="w-full h-auto  rounded-lg border-gray-300 transform transition duration-500 hover:scale-105 "/>
       </figure>
       <figcaption className=" w-full flex flex-col justify-between text-left">
         <div className='flex flex-col'>
