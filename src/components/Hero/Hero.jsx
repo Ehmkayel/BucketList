@@ -1,32 +1,24 @@
 import React, { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
-import { GetLocation, Search } from '../../lib/Search'
-import Button from '../ReUsable/Button'
+import { Search } from '../../lib/Search'
+import DestinationView from '../DestinationView/DestinationView'
 
 const Hero = () => {
   const[latLong, setLatLong] = useState('')
+  const[locations, setLocations] = useState([])
 
   const searchLocation = async () => {
-    try {
-        const location = await GetLocation(latLong);
-        console.log("Location data:", location);  
-
-        if (location.length > 0) {
-            const searchResults = await Promise.all(
-                location.map(data => {
-                    console.log("Current data:", data); 
-                    return Search(data.lat, data.lon);
-                })
-            );
-            console.log("Search results:", searchResults);
-        }
-
-        console.log("The location:", location);
-    } catch (error) {
-        console.error("Error in searching location:", error.message);
-    }
+     const searchResults = await Search(latLong);          
+      const locationData = searchResults.data.list 
+      setLocations(locationData)
+      locationData.map((item) =>{
+        console.log(item.listing.localizedCityName, item.listing.contextualPictures[0].picture)
+      })
+    
+    
 };
   return (
+    <>
     <main className="bg-skyBlue container mx-auto pt-[6rem] lg:pt-[10rem]">
     <section className="flex flex-col lg:flex-row justify-between px-4 md:px-[2rem] lg:px-[4rem] items-center">
       <figcaption className=" mb-8 text-center lg:text-left w-full lg:w-[40%]">
@@ -47,7 +39,7 @@ const Hero = () => {
               />
              
           </div>
-            <Button className="w-full max-w-[40%] mx-auto" onClick={searchLocation}>Enter</Button>
+            <button className="px-4 p-3 flex text-white justify-center items-center cursor-pointer rounded-[8px] bg-blue hover:bg-white hover:text-blue border border-blue w-full max-w-[40%] mx-auto" onClick={searchLocation}>Enter</button>
           </div>
           
         
@@ -68,7 +60,11 @@ const Hero = () => {
         />
       </figure>
     </section>
-  </main>
+    </main>
+    {locations.length > 0 && <DestinationView packages={locations}/> }
+    
+    </>
+  
   )
 }
 

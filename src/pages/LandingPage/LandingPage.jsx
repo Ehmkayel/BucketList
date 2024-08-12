@@ -30,6 +30,7 @@ import WhyChooseUs from '../../components/WhyChooseUs.jsx/WhyChooseUs';
 import Testimonial from '../../components/Testimonials/Testimonial';
 import Banner from '../../components/Banner/Banner';
 
+
 const LandingPage = () => {
   return (
     <>

@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         element: <Package/>
       },
       {
-        path: "booking",
+        path: "booking/:id",
         element: <BookingForm/>
       },
       {

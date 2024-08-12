@@ -1,24 +1,38 @@
-import { getAccessToken } from "./GetAccessToken"
+export const Search = async(location) => {
+ const url = `https://airbnb45.p.rapidapi.com/api/v1/searchPropertyByLocation?location=${location}&selfCheckin=0&instantBook=0&allowsPets=0&guestFavorite=0&flexibleCancellation=0&typeOfPlace=entire_home`;
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': import.meta.env.VITE_API_KEY,
+		'x-rapidapi-host': 'airbnb45.p.rapidapi.com'
+	}
+};
 
-
-export const GetLocation = async(location) => {
-    const response = await fetch(`https://geocode.maps.co/search?q=${location}&api_key=${import.meta.env.VITE_MAPS_API_KEY}`)
-    if(!response.ok) throw new Error('Location not found')
-    return response.json()
-
+try {
+	const response = await fetch(url, options);
+	const result = await response.json();
+  return result
+} catch (error) {
+	console.error(error);
+}
 }
 
-export const Search = async(lat, long) => {
-    const accessToken = await getAccessToken()
-    console.log(lat, long)
-    const response = await fetch(`https://test.api.amadeus.com/v1/shopping/activities?longitude=${long}&latitude=${lat}&radius=10`,  {
-        method: 'GET', 
-        headers: {
-          'Authorization': `Bearer ${accessToken}`,
-          'Content-Type': 'application/json'
-        }
-      })
-    if(!response.ok) throw new Error('Location not found')
-    return response.json()
-     
-}
+
+export const Property = async(propertyId) => {
+  const url = `https://airbnb45.p.rapidapi.com/api/v1/getPropertyDetails?propertyId=${propertyId}`;
+ const options = {
+   method: 'GET',
+   headers: {
+     'x-rapidapi-key': import.meta.env.VITE_API_KEY,
+     'x-rapidapi-host': 'airbnb45.p.rapidapi.com'
+   }
+ };
+ 
+ try {
+   const response = await fetch(url, options);
+   const result = await response.json();
+   return result
+ } catch (error) {
+   console.error(error);
+ }
+ }
