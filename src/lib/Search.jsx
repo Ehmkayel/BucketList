@@ -3,7 +3,7 @@ export const Search = async(location) => {
 const options = {
 	method: 'GET',
 	headers: {
-		'x-rapidapi-key': import.meta.env.VITE_API_KEY,
+		'x-rapidapi-key': import.meta.env.VITE_API_KEY2,
 		'x-rapidapi-host': 'airbnb45.p.rapidapi.com'
 	}
 };
@@ -23,7 +23,7 @@ export const Property = async(propertyId) => {
  const options = {
    method: 'GET',
    headers: {
-     'x-rapidapi-key': import.meta.env.VITE_API_KEY,
+     'x-rapidapi-key': import.meta.env.VITE_API_KEY2,
      'x-rapidapi-host': 'airbnb45.p.rapidapi.com'
    }
  };

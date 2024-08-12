@@ -16,7 +16,7 @@ const DestinationView = (packages) => {
                     <p className='mt-2'>{data.listing.name}</p>
                     <p className='mt-2'>{data.pricingQuote.structuredStayDisplayPrice.primaryLine.price}</p>
                                          
-                    <a href={`/booking/${data.id}`} className='mt-4 inline-block bg-blue text-white px-4 py-2 rounded-md'>Book Now</a> 
+                    <a href={`/booking/${data.id}`} className='mt-4 inline-block bg-blue text-white px-4 py-2 rounded-md'>View Details</a> 
                 </div>
             ))}
         </div>

@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Property } from '../../lib/Search';
+import Details from '../Details/Details';
 
 
 const BookingForm = () => {
   const {id}=useParams()
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    guests: 1,
-    message: ''
-  });
+const [formData, setFormData] = useState({});
 
   const [errors, setErrors] = useState({});
   useEffect(() => {
@@ -55,11 +50,14 @@ const BookingForm = () => {
 
   }
   return (
-    <div className='pt-[6rem] booking-form bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto'>
-      <h3 className='text-xl font-semibold mb-4'>Book</h3>
-      <form onSubmit={handleSubmit} className='space-y-4'>
-        <div>
-          <label htmlFor='name' className='block text-gray-700'>Name</label>
+    <main className='pt-[2rem] lg:pt-[6rem] '>
+      <section className='flex flex-col'>
+        {formData.message==="Success" &&  <Details packages={formData}/>  }
+        <div className='booking-form bg-white p-6 rounded-lg shadow-md '>
+          <h3 className='text-xl font-semibold mb-4'>Book</h3>
+          <form onSubmit={handleSubmit} className='space-y-4 max-w-md mx-auto'>
+            <div>
+                <label htmlFor='name' className='block text-gray-700'>Name</label>
           <input
             type='text'
             id='name'
@@ -126,12 +124,17 @@ const BookingForm = () => {
             className='w-full p-2 border rounded-md border-gray-300'
           ></textarea>
         </div>
-        <button type='submit' className='w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors'>
+        <button type='submit' className='w-full bg-skyBlue text-white py-2 rounded-md hover:bg-blue-600 transition-colors'>
           Book Now
         </button>
       </form>
     </div>
+      </section>
+      
+    </main>
+    
   );
 };
 
 export default BookingForm;
+
